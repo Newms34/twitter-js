@@ -1,13 +1,21 @@
 var express = require('express'),
-morgan = require('morgan');
+morgan = require('morgan'),
+swig = require('swig');
 
 var app=express();
 
 app.use(morgan('dev'));
 
+app.engine('html', swig.renderFile);
+app.set('view engine','html');
+app.set('views', __dirname+ '/views');
+swig.setDefaults({cache: false});
+
 app.get('/',function (req,res) {
-	console.log('A log');
-	res.send('Go away! You\'re not welcome here.');
+	// console.log('A log');
+	// res.send('Go away! You\'re not welcome here.');
+	var people = [{name: 'Full'}, {name: 'Stacker'}, {name: 'Son'}];
+	res.render( 'index', {title: 'People with Weird Names Who Should Be Shunned', people: people} );
 });
 
 app.get('/tweets',function (req,res) {
