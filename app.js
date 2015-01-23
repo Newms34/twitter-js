@@ -7,14 +7,14 @@ app.use(morgan('dev'));
 
 app.get('/',function (req,res) {
 	console.log('A log');
-	res.send('What the hell are you lookin at?');
+	res.send('Go away! You\'re not welcome here.');
 });
 
+app.get('/tweets',function (req,res) {
+	res.send('Is there a bird in here?');
+});
+
+
 var server = app.listen(3000, function () {
-
-  var host = server.address().address
-  var port = server.address().port
-
-  console.log('Example app listening at http://%s:%s', host, port)
 
 });
