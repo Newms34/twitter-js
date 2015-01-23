@@ -25,7 +25,7 @@ swig.setDefaults({cache: false});
 // });
 
 
-
+app.use(express.static('./public'));
 
 var server = app.listen(3000, function () {
 
