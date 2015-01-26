@@ -75,3 +75,8 @@ li {
   float:left;
   display:inline-block;
 }
+#form{
+  background-color: #eef;
+  padding: 10px;
+  border-radius:2px;
+}

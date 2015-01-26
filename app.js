@@ -1,12 +1,19 @@
 var express = require('express'),
 morgan = require('morgan'),
 swig = require('swig'),
-routes = require('./routes/');
+routes = require('./routes/'),
+bodyParser = require('body-parser');
 
 var app=express();
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(morgan('dev'));
+
 app.use('/',routes);
+
+//body stuff
+
+
 
 app.engine('html', swig.renderFile);
 app.set('view engine','html');
