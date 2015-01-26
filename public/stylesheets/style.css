@@ -63,10 +63,6 @@ li {
   list-style:none;
 
 }
-li:hover : .dudeImg {
-
-  transform: rotate (180deg);
-}
 .tweetTxtDiv {
   position: relative;
   display:inline-block;
