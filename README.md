@@ -1,2 +1,2 @@
 # twitter-js
-# STOP READING THIS
+>A twitter API app built at [Fullstack Academy](http://www.fullstackacademy.com)
